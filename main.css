@@ -343,6 +343,6 @@ footer .menu-mains a {
     width: 80px;
   }
   .img-skill img:hover {
-    transform: scale(1.05);
+    transform: none;
   }
 }
