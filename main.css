@@ -342,4 +342,7 @@ footer .menu-mains a {
   .skills .img-skill img {
     width: 80px;
   }
+  .img-skill img:hover {
+    transform: scale(1.05);
+  }
 }
