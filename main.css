@@ -23,22 +23,6 @@ body {
   border: none;
   outline: none;
 }
-/* .btn {
-  color: black;
-  background-color: rgb(123, 202, 255);
-  font-weight: 600;
-  letter-spacing: 2px;
-  transition: 0.4s;
-  margin: 0;
-}
-.btn:hover,
-.btn:focus {
-  background-color: rgb(255, 145, 145);
-  color: white;
-  border: none !important;
-  outline: none;
-  box-shadow: none;
-} */
 /* Nav */
 .header-area .main-menu .navbar {
   padding: 1rem 6rem;
@@ -86,7 +70,6 @@ h1.tittle-text {
 }
 /* About Area */
 .about-area {
-  margin-bottom: 100px;
 }
 .about-area h1 {
   font-size: 40px;
@@ -121,34 +104,111 @@ h1.tittle-text {
 .about-area .container-fluid .row img {
   width: 80%;
 }
-/* Portofolio */
-.card-portofolio {
-  margin-bottom: 100px;
+/* Skill */
+.skills {
+  width: 100%;
+  background-color: rgb(134, 134, 250);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  height: 80vh;
+  cursor: default;
+  margin: 100px 0;
 }
-.card-portofolio h1 {
-  font-weight: 600;
+.skill-content h1 {
+  font-size: 30px;
+  width: 80%;
+}
+.skills .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.img-skill {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-skill img {
+  width: 90px;
+  margin: 10px;
+  box-shadow: unset 3px 3px 10px 10px black;
+  transition: 0.4s;
+}
+.img-skill img:hover {
+  transform: scale(1.4);
+}
+
+.portfolio {
+  padding: 100px 0;
+  width: 100%;
+  height: fit-content;
+}
+.portfolio .container {
+  padding: 0 50px;
+}
+.portfolio h2 {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 3px;
   margin-bottom: 50px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
 }
-.container-fluid div.card {
-  margin: 10px 30px;
-  cursor: pointer;
-  transition: 0.3s;
-  height: 15rem;
-  border: 2px solid rgba(0, 0, 0, 0.116);
+.portfolio img {
+  width: 300px;
+  height: 168px;
 }
-.container-fluid div.card:hover {
-  transform: scale(1.15);
-  border: 1px solid rgba(0, 0, 0, 0.336);
+.card-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
-.card-portofolio .card a {
-  text-decoration: none;
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 168px;
+  perspective: 1000px;
+  margin: 15px 0;
+}
+.flip-card-inner {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.5);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+
+.flip-card-front {
+  background-color: #bbb;
   color: black;
 }
-.card-portofolio .card p {
-  font-size: 15px;
+
+.flip-card-back {
+  background-color: rgb(150, 150, 250);
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 100px 5px rgba(0, 0, 0, 0.288);
+  cursor: pointer;
 }
 footer {
   padding: 40px 0;
@@ -165,17 +225,12 @@ footer .row div a {
   color: white;
   transition: all 0.3s;
 }
-/* footer .row div a:hover {
-  background: linear-gradient(
-    90deg,
-    rgb(255, 145, 145) 0%,
-    rgb(131, 131, 253) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-} */
-
+footer h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  margin: 10px;
+}
 footer i {
   margin-right: 15px;
 }
@@ -273,5 +328,18 @@ footer .menu-mains a {
   }
   .about-area .text-content p {
     font-size: 16px;
+  }
+  .skills {
+    clip-path: none;
+  }
+  .skills .container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .skill-content h1 {
+    width: 100%;
+  }
+  .skills .img-skill img {
+    width: 80px;
   }
 }
