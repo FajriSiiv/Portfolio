@@ -9,8 +9,9 @@ body {
   font-family: "Poppins", sans-serif;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
-.header-area .navbar-brand {
+/* .header-area .navbar-brand {
   text-transform: uppercase;
   font-size: 25px;
   font-weight: bold;
@@ -18,6 +19,9 @@ body {
   padding: 0 2rem 0 5rem;
   color: rgb(24, 245, 171);
   transition: 0.4s;
+} */
+.navbar-brand img {
+  width: 50px;
 }
 .header-area .navbar .navbar-toggler {
   border: none;
@@ -90,6 +94,7 @@ h1.tittle-text {
   letter-spacing: 2px;
   line-height: 30px;
   font-weight: 500;
+  text-align: justify;
 }
 .about-area .text-content h2 {
   letter-spacing: 10px;
@@ -321,13 +326,14 @@ footer .menu-mains a {
     padding: 0 20px;
   }
   .about-area .text-content h2 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .about-area h1 {
     margin: 50px 0;
+    font-size: 35px;
   }
   .about-area .text-content p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .skills {
     clip-path: none;
@@ -336,13 +342,35 @@ footer .menu-mains a {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .skill-content h1 {
+  .skills .skill-content h1 {
+    font-size: 20px;
     width: 100%;
   }
   .skills .img-skill img {
-    width: 80px;
+    width: 50px;
   }
-  .img-skill img:hover {
+  .skills .img-skill img:hover {
     transform: none;
+  }
+  .portfolio .container {
+    padding: 0;
+  }
+  .portfolio h2 {
+    font-size: 25px;
+  }
+  .navbar-brand img {
+    width: 30px;
+  }
+  footer .row {
+    flex-direction: column-reverse;
+  }
+  footer .row div {
+    margin: 20px;
+  }
+  footer h3 {
+    font-size: 18px;
+  }
+  footer a {
+    font-size: 15 px;
   }
 }
