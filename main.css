@@ -11,15 +11,7 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-/* .header-area .navbar-brand {
-  text-transform: uppercase;
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  padding: 0 2rem 0 5rem;
-  color: rgb(24, 245, 171);
-  transition: 0.4s;
-} */
+
 .navbar-brand img {
   width: 50px;
 }
