@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-.navbar-brand img {
+.header-area a.navbar-brand img {
   width: 50px;
 }
 .header-area .navbar .navbar-toggler {
