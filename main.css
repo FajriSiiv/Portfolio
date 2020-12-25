@@ -65,8 +65,7 @@ h1.tittle-text {
   color: rgb(107, 107, 255);
 }
 /* About Area */
-.about-area {
-}
+
 .about-area h1 {
   font-size: 40px;
   font-weight: 600;
@@ -104,7 +103,7 @@ h1.tittle-text {
 /* Skill */
 .skills {
   width: 100%;
-  background-color: rgb(134, 134, 250);
+  background-color: rgb(185, 185, 248);
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
   height: 80vh;
   cursor: default;
@@ -136,80 +135,42 @@ h1.tittle-text {
 .img-skill img:hover {
   transform: scale(1.4);
 }
-
-.portfolio {
-  padding: 100px 0;
-  width: 100%;
-  height: fit-content;
+/* Works */
+.works-pro {
+  background-color: rgb(196, 196, 196);
+  height: 100px;
+  animation-name: warnas;
+  animation-duration: 5s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
 }
-.portfolio .container {
-  padding: 0 50px;
-}
-.portfolio h2 {
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 3px;
-  margin-bottom: 50px;
-}
-.portfolio img {
-  width: 300px;
-  height: 168px;
-}
-.card-portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-}
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 168px;
-  perspective: 1000px;
-  margin: 15px 0;
-}
-.flip-card-inner {
-  position: relative;
-  width: 300px;
+.works-pro .container {
   height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.5);
 }
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 300px;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 5px;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: rgb(150, 150, 250);
-  color: white;
-  transform: rotateY(180deg);
+.work-go {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0 0 100px 5px rgba(0, 0, 0, 0.288);
-  cursor: pointer;
+  height: 100%;
+}
+.work-go a {
+  font-size: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.work-go a:hover {
+  color: rgb(3, 109, 21);
 }
 footer {
   padding: 40px 0;
   background: rgba(0, 0, 0, 0.63);
+  margin-top: 100px;
 }
 footer .row div {
   display: flex;
@@ -227,6 +188,7 @@ footer h3 {
   font-weight: 600;
   color: white;
   margin: 10px;
+  cursor: default;
 }
 footer i {
   margin-right: 15px;
@@ -244,18 +206,19 @@ footer .menu-mains a:hover {
 footer .contact-main i {
   font-size: 20px;
 }
-footer .row .contact-main a:nth-child(1):hover {
+footer .row .contact-main a:nth-child(2):hover {
   color: rgb(248, 78, 78);
 }
-footer .row .contact-main a:nth-child(2):hover {
+footer .row .contact-main a:nth-child(3):hover {
   color: rgb(129, 129, 248);
 }
-footer .row .contact-main a:nth-child(3):hover {
-  color: rgb(12, 12, 12);
+footer .row .contact-main a:nth-child(4):hover {
+  color: rgb(68, 68, 68);
 }
 footer .menu-mains a {
   letter-spacing: 2px;
 }
+
 @media (max-width: 900px) {
   .header-area .main-menu .navbar {
     padding: 2rem;
@@ -341,6 +304,9 @@ footer .menu-mains a {
   .skills .img-skill img {
     width: 50px;
   }
+  .skills .img-skill img.sass {
+    width: 65px;
+  }
   .skills .img-skill img:hover {
     transform: none;
   }
@@ -364,5 +330,20 @@ footer .menu-mains a {
   }
   footer a {
     font-size: 15 px;
+  }
+}
+
+@keyframes warnas {
+  0% {
+    background-color: rgb(255, 110, 110);
+  }
+  25% {
+    background-color: rgb(255, 178, 106);
+  }
+  50% {
+    background-color: rgb(255, 132, 132);
+  }
+  100% {
+    background-color: rgb(132, 132, 255);
   }
 }
